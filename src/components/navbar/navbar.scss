@@ -1,0 +1,96 @@
+@import "../../App.scss";
+.navbar{
+    color :white;
+    font-size: 14px;
+    position: fixed;
+    width:100%;
+    top:0;
+    z-index: 999;
+    background: linear-gradient(to top , transparent 0% ,rgb(0,0,0,0.3) 50%);
+
+    &.scrolled{
+        background-color: var(--main-color);
+    }
+    .container{
+        padding: 0px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        height: 70px;
+
+        .left{
+            display: flex;
+            align-items: center;
+            img{
+                height: 25px;
+                margin-right: 40px;
+                @include mobile{
+                    display: none;
+                }
+            }
+            span{
+                margin-right: 20px;
+                cursor: pointer;
+                @include table{
+                    display: none;
+                }
+                &.navbarLinkmain{
+                    @include table{
+                        display: block;
+                    }
+                }
+            }
+        }
+        .right{
+            display: flex;
+            align-items: center;
+            .icon{
+                cursor: pointer;
+                margin: 0px 15px;
+            }
+            .inputSerch{
+                border: none;
+                border-bottom: 2px solid white;
+                margin-right: 20px;
+                background-color: inherit;
+                color:white;
+                @include mobile{
+                    margin-right: 0px;
+                }
+            }
+            img{
+                height: 30px;
+                border-radius: 5px;
+                cursor: pointer;
+                object-fit: cover;
+             width: 30px;
+            }
+            .profile{
+                .options{
+                    display: none;
+                    background-color: var(--main-color);
+                    border-radius: 5px;
+                    padding: 10px;
+                  
+                }
+              
+                span{
+                
+                    cursor: pointer;
+                }
+                &:hover{
+                  .options{
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                  } 
+                }
+               
+
+              
+            }
+        }
+       
+    }
+}
