@@ -15,7 +15,7 @@ const Navbar = () => {
     useEffect(() => {
         const getUser = async () => {
             try {
-                const res = await axios.get(`/api/users/find/${id}`, {
+                const res = await axios.get(`https://mernbackend-nbdj.onrender.com/api/users/find/${id}`, {
                     headers: {
                         "x-auth-token": JSON.parse(localStorage.getItem("user")).accessToken,
                     }

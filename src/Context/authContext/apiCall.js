@@ -5,7 +5,7 @@ import { toast } from "react-toastify"
 export const login = async (user, dispatch) => {
     dispatch(loginStart())
     try {
-        const res = await axios.post("/api/auth/login", user);
+        const res = await axios.post("https://mernbackend-nbdj.onrender.com/api/auth/login", user);
         toast.success('user Login success', {
             position: "top-right",
             autoClose: 5000,

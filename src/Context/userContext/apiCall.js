@@ -8,7 +8,7 @@ export const getUsers = async (dispatch) => {
     dispatch(getUsersStart())
     try {
 
-        const res = await axios.get("/api/users", {
+        const res = await axios.get("https://mernbackend-nbdj.onrender.com/api/users", {
             headers: {
                 "x-auth-token": JSON.parse(localStorage.getItem("user")).accessToken,
             }
@@ -24,7 +24,7 @@ export const createUser = async (user, dispatch) => {
     dispatch(creteuserStart())
     try {
 
-        const res = await axios.post("/api/users", user, {
+        const res = await axios.post("https://mernbackend-nbdj.onrender.com/api/users", user, {
             headers: {
                 "x-auth-token": JSON.parse(localStorage.getItem("user")).accessToken,
             }
@@ -41,7 +41,7 @@ export const deleteUser = async (id, dispatch) => {
     dispatch(deleteUserStart())
     try {
 
-        await axios.delete("/api/users/" + id, {
+        await axios.delete("https://mernbackend-nbdj.onrender.com/api/users/" + id, {
             headers: {
                 "x-auth-token": JSON.parse(localStorage.getItem("user")).accessToken,
             }
@@ -57,7 +57,7 @@ export const deleteUser = async (id, dispatch) => {
 export const editUser = async (id, user, dispatch) => {
     dispatch(editUserStart())
     try {
-        const res = axios.put(`/api/users/${id}`, user, {
+        const res = axios.put(`https://mernbackend-nbdj.onrender.com/api/users/${id}`, user, {
             headers: {
                 "x-auth-token": JSON.parse(localStorage.getItem("user")).accessToken,
             }
