@@ -17,7 +17,7 @@ const Register = () => {
         e.preventDefault()
         try {
 
-            await axios.post("auth/register", { email, username, password })
+            await axios.post("https://mernbackend-nbdj.onrender.com/api/auth/register", { email, username, password })
             navigate("/login")
         } catch (error) {
             console.log(error)
