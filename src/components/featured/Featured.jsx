@@ -8,7 +8,7 @@ const Featured = ({ type, setGenre }) => {
     useEffect(() => {
         const getRandomContent = async () => {
             try {
-                const res = await axios.get(`movies/random?type=${type}`, {
+                const res = await axios.get(`/api/movies/random?type=${type}`, {
                     headers: {
                         "x-auth-token": JSON.parse(localStorage.getItem("user")).accessToken,
                     }

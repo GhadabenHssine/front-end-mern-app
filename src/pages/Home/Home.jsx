@@ -13,7 +13,7 @@ const Home = ({ type }) => {
     useEffect(() => {
         const getRandomLists = async () => {
             try {
-                const res = await axios.get(`lists${type ? "?type=" + type : ""}${genre ? "&genre=" + genre : ""}`, {
+                const res = await axios.get(`/api/lists${type ? "?type=" + type : ""}${genre ? "&genre=" + genre : ""}`, {
                     headers: {
                         "x-auth-token": JSON.parse(localStorage.getItem("user")).accessToken,
                     }
