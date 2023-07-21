@@ -47,6 +47,5 @@
   },
   "devDependencies": {
     "sass": "^1.62.0"
-  },
-  "proxy": "https://mernbackend-nbdj.onrender.com/"
+  }
 }
